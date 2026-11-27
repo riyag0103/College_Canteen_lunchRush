@@ -2,10 +2,10 @@ name: MLOps CI Pipeline
 
 on:
   push:
-  branches:
-    - main
-    - "feature/**"
-    - "lavanya-stage4-drift-retraining"
+    branches:
+      - main
+      - "feature/**"
+      - "lavanya-stage4-drift-retraining"
 
   pull_request:
     branches:
