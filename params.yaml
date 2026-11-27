@@ -1,0 +1,29 @@
+data:
+  train_path: "data/raw/train.csv"
+  later_path: "data/raw/later.csv"
+  holdout_path: "data/holdout_features.csv"
+  cleaned_train_path: "data/processed/train_clean.csv"
+
+training:
+  test_size: 0.2
+  random_state: 42
+
+models:
+  linear_regression: {}
+  random_forest:
+    n_estimators: 200
+    random_state: 42
+  gradient_boosting:
+    n_estimators: 100
+    learning_rate: 0.05
+    random_state: 42
+
+monitoring:
+  psi_bins: 10
+  later_train_fraction: 0.70
+  promotion_threshold: 0.12
+
+mlflow:
+  experiment_name: "MP002_Canteen_Demand_Forecasting"
+  registered_model_name: "canteen_demand_model"
+  champion_alias: "champion"

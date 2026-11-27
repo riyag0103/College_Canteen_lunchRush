@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: mp002-api
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: mp002-api
+
+  template:
+    metadata:
+      labels:
+        app: mp002-api
+
+    spec:
+      containers:
+        - name: mp002-api
+          image: mp002-api:1.0
+          imagePullPolicy: IfNotPresent
+
+          ports:
+            - containerPort: 8000
+
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 5
+            periodSeconds: 10
+
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 20
+            periodSeconds: 20

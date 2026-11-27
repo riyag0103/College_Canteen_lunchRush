@@ -1,0 +1,66 @@
+group_id: "G043"
+problem_id: "MP002"
+
+data_issues:
+  leaking_column:
+    present: false
+    column: null
+
+  unit_mixup:
+    present: true
+    column: "menu_price_rs"
+    group_value: "B-Block"
+    factor: 100
+
+  sentinel_value:
+    present: null
+    column: null
+    value: null
+    count: null
+
+  duplicate_rows:
+    present: true
+    count: 34
+
+  stuck_sensor:
+    present: null
+    column: null
+    start_date: null
+    end_date: null
+
+  target_typos:
+    present: true
+    count: 11
+
+  spelling_variants:
+    present: false
+    column: null
+    true_levels: null
+
+tracking:
+  experiment_name: "MP002_Canteen_Demand_Forecasting"
+  best_run_id: "741a40ff7b8c42d6a0467931bea30515"
+  registered_model_name: "canteen_demand_model"
+  champion_version: 2
+
+monitoring:
+  psi:
+    students_on_campus: 0.010498
+    menu_price_rs: 0.064812
+    temp_c: 3.711112
+    exam_days_left: 0.169836
+    special_dishes: 0.007583
+    queue_minutes_yesterday: 0.024876
+
+  most_drifted_feature: "temp_c"
+
+  mae_by_group:
+    A-Block: 24.60
+    B-Block: 50.72
+    Hostel: 23.61
+
+    worst_served_group: "B-Block"
+
+  mae_v1_on_check: 35.74
+  mae_v2_on_check: 31.04
+  decision: "promote"
