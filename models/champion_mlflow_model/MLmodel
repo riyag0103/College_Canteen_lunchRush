@@ -1,0 +1,41 @@
+artifact_path: file:d:/College_Canteen_lunchRush/College_Canteen_lunchRush/notebooks/mlruns/1/models/m-ed792b070be3471c853e0c107334de28/artifacts
+env_vars:
+- OPENAI_API_KEY
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.8
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.6.1
+is_signature_from_type_hint: false
+mlflow_version: 3.1.1
+model_id: m-ed792b070be3471c853e0c107334de28
+model_size_bytes: 4254
+model_uuid: m-ed792b070be3471c853e0c107334de28
+prompts: null
+run_id: 856187f82c9d473d96dd647a0d9ba305
+saved_input_example_info:
+  artifact_path: input_example.json
+  pandas_orient: split
+  serving_input_path: serving_input_example.json
+  type: dataframe
+signature:
+  inputs: '[{"type": "long", "name": "students_on_campus", "required": true}, {"type":
+    "double", "name": "menu_price_rs", "required": true}, {"type": "double", "name":
+    "temp_c", "required": true}, {"type": "long", "name": "exam_days_left", "required":
+    true}, {"type": "long", "name": "special_dishes", "required": true}, {"type":
+    "double", "name": "queue_minutes_yesterday", "required": true}, {"type": "string",
+    "name": "day_type", "required": true}, {"type": "string", "name": "block", "required":
+    true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "float64", "shape": [-1]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2026-11-21 15:35:26.762263'

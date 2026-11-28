@@ -1,62 +1,53 @@
-# MP002 findings --- fill in every value, keep every key.
-# The marking tool reads this file. Write null only where the comment says so.
-# Use the exact column names and group values from your data files.
-
-group_id: "G043"          # your group id, e.g. "G042"
-problem_id: "MP002"
-
+group_id: G043
+problem_id: MP002
 data_issues:
-  # For each of the 7 kinds: present: true or false.
-  # If present is false, leave the other values as null.
   leaking_column:
     present: null
-    column: null           # the column that must not be used as a feature
+    column: null
   unit_mixup:
     present: null
-    column: null           # the column recorded in a different unit
-    group_value: null      # the value of block whose rows are affected
-    factor: null           # wrong value = right value x factor
+    column: null
+    group_value: null
+    factor: null
   sentinel_value:
     present: null
     column: null
-    value: null            # the special number typed instead of a blank
-    count: null            # how many rows have it
+    value: null
+    count: null
   duplicate_rows:
     present: null
-    count: null            # number of EXTRA copies (rows you would delete)
+    count: null
   stuck_sensor:
     present: null
     column: null
-    start_date: null       # first date with the stuck value, YYYY-MM-DD
-    end_date: null         # last date with the stuck value, YYYY-MM-DD
+    start_date: null
+    end_date: null
   target_typos:
     present: null
-    count: null            # rows whose target was typed 10 times too big
+    count: null
   spelling_variants:
     present: null
     column: null
-    true_levels: null      # how many real categories there are after cleaning
-
+    true_levels: null
 tracking:
-  experiment_name: null
-  best_run_id: null        # the MLflow run id of your v1 model
-  registered_model_name: null
-  champion_version: null
-
+  experiment_name: MP002_Canteen_Demand_Forecasting
+  best_run_id: 741a40ff7b8c42d6a0467931bea30515
+  registered_model_name: canteen_demand_model
+  champion_version: 3
 monitoring:
-  psi:                     # cleaned train.csv vs later.csv, 10 bins
-    students_on_campus: null
-    menu_price_rs: null
-    temp_c: null
-    exam_days_left: null
-    special_dishes: null
-    queue_minutes_yesterday: null
-  most_drifted_feature: null
-  mae_by_group:            # v1 on later.csv, per value of block
-    'A-Block': null
-    'B-Block': null
-    'Hostel': null
-  worst_served_group: null
-  mae_v1_on_check: null    # v1 on the last 30% of later.csv (by date)
-  mae_v2_on_check: null    # v2 on the same rows
-  decision: null           # promote or keep
+  psi:
+    students_on_campus: 0.011159535492653298
+    menu_price_rs: 0.061807563312511485
+    temp_c: 3.7112993662868994
+    exam_days_left: 0.1808744706193501
+    special_dishes: 0.00790839248825199
+    queue_minutes_yesterday: 0.018287538531334288
+  most_drifted_feature: temp_c
+  mae_by_group:
+    A-Block: 24.60023273660202
+    B-Block: 66.4586144061345
+    Hostel: 23.614124953457388
+  worst_served_group: B-Block
+  mae_v1_on_check: 35.7382236535609
+  mae_v2_on_check: 31.040295505017124
+  decision: promote

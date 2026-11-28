@@ -1,0 +1,66 @@
+{
+  "dataframe_split": {
+    "columns": [
+      "students_on_campus",
+      "menu_price_rs",
+      "temp_c",
+      "exam_days_left",
+      "special_dishes",
+      "queue_minutes_yesterday",
+      "day_type",
+      "block"
+    ],
+    "data": [
+      [
+        5151,
+        50.0,
+        25.4,
+        9,
+        1,
+        32.6,
+        "weekday",
+        "Hostel"
+      ],
+      [
+        5280,
+        47.0,
+        44.1,
+        51,
+        2,
+        31.3,
+        "saturday",
+        "Hostel"
+      ],
+      [
+        5328,
+        82.0,
+        42.6,
+        30,
+        5,
+        12.1,
+        "weekday",
+        "Hostel"
+      ],
+      [
+        1208,
+        54.0,
+        43.1,
+        34,
+        2,
+        26.4,
+        "weekday",
+        "A-Block"
+      ],
+      [
+        5901,
+        61.0,
+        16.7,
+        56,
+        3,
+        8.2,
+        "weekday",
+        "Hostel"
+      ]
+    ]
+  }
+}
